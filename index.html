@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFWANBOYS | Network Engineer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+header {
+    background: #0d1b2d;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 40px;
+    background: radial-gradient(
+        circle at 80% 45%,
+        #123653,
+        transparent 35%
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.15;
+    margin: 16px 0;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.role {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    color: #9aacc2;
+    margin: 20px 0 26px;
+    max-width: 550px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #07111f;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #2dd4bf;
+    transform: translateY(-2px);
+}
+
+.network {
+    width: 230px;
+    height: 230px;
+    flex: 0 0 230px;
+    display: grid;
+    place-items: center;
+    color: #38bdf8;
+    font-size: 115px;
+    border: 1px solid #285071;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #102b46, #0d1b2d);
+    text-shadow: 0 0 30px #38bdf8;
+    box-shadow: 0 20px 60px #0004;
+}
+
+/* SECTION */
+section {
+    padding: 80px 8%;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+/* ABOUT */
+.about-box,
+.skill-card,
+.project-card,
+.contact {
+    background: #0d1b2d;
+    border: 1px solid #20354d;
+    border-radius: 12px;
+}
+
+.about-box {
+    padding: 30px;
+}
+
+.about-box h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.about-box p,
+.skill-card p,
+.project-card p,
+.contact p {
+    color: #9aacc2;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+    transition: 0.25s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.skill-card h3,
+.project-card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+/* PROJECT */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 25px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 35px;
+    text-align: center;
+}
+
+.contact .section-title {
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin: 12px 0 22px;
+}
+
+/* FOOTER */
+footer {
+    background: #0d1b2d;
+    text-align: center;
+    padding: 25px;
+    color: #9aacc2;
+    border-top: 1px solid #20354d;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 75px 6%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .network {
+        width: 170px;
+        height: 170px;
+        flex-basis: 170px;
+        font-size: 85px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .skills,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">AFWANBOYS.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            WELCOME TO MY PORTFOLIO
+        </div>
+
+        <h1>
+            Hi, I'm<br>
+            <span>AFWANBOYS</span>
+        </h1>
+
+        <div class="role">
+            Junior Network Engineer | Student TJKT
+        </div>
+
+        <p>
+            Saya adalah siswa kelas X jurusan
+            Teknik Jaringan Komputer dan Telekomunikasi (TJKT).
+            Saya memiliki minat dalam networking,
+            konfigurasi jaringan, dan teknologi informasi.
+            Saat ini saya terus belajar mengembangkan
+            kemampuan di bidang jaringan komputer.
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Profile
+        </a>
+
+    </div>
+
+    <div class="network">⌘</div>
+
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-box">
+
+        <h3>AFWANBOYS</h3>
+
+        <p>
+            Saya merupakan pelajar kelas X jurusan
+            Teknik Jaringan Komputer dan Telekomunikasi
+            (TJKT). Saya sedang mempelajari dasar jaringan
+            komputer, IP Address, perangkat router,
+            switch, dan troubleshooting jaringan.
+
+            Saya ingin terus meningkatkan pengetahuan
+            dan pengalaman agar dapat berkembang menjadi
+            Network Engineer yang profesional.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill-card">
+            <h3>Networking</h3>
+            <p>
+                Memahami dasar jaringan komputer
+                dan topologi LAN.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>IP Addressing</h3>
+            <p>
+                Mempelajari IPv4, subnet mask,
+                gateway, dan subnetting.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Router &amp; Switch</h3>
+            <p>
+                Mengenal perangkat jaringan
+                dan fungsi dasarnya.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Troubleshooting</h3>
+            <p>
+                Belajar menganalisis masalah
+                koneksi jaringan.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Network Security</h3>
+            <p>
+                Mempelajari dasar keamanan
+                dan perlindungan jaringan.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>TCP/IP</h3>
+            <p>
+                Memahami dasar protokol
+                komunikasi jaringan.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Project 01 — Simulasi LAN</h3>
+            <p>
+                Latihan memahami hubungan antarperangkat
+                dalam jaringan LAN.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 02 — IP Address</h3>
+            <p>
+                Latihan mengenali alamat IP dan
+                konfigurasi jaringan dasar.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 03 — Router &amp; Switch</h3>
+            <p>
+                Mempelajari fungsi dan peran
+                perangkat jaringan.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 04 — Troubleshooting</h3>
+            <p>
+                Latihan mengidentifikasi penyebab
+                masalah koneksi jaringan.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Let's connect and learn about networking!
+        </p>
+
+        <!-- Ganti email contoh dengan email milikmu -->
+        <a href="mailto:emailkamu@example.com" class="btn">
+            Send Email
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 AFWANBOYS | Junior Network Engineer
+    </p>
+
+    <p>Built with HTML &amp; CSS</p>
+
+</footer>
+
+</body>
+</html>
